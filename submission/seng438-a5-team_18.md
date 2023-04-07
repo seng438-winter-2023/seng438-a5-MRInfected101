@@ -2,24 +2,115 @@
 
 **Lab. Report \#5 – Software Reliability Assessment**
 
-| Group \#:       |   |
-|-----------------|---|
-| Student Names:  |   |
-|                 |   |
-|                 |   |
-|                 |   |
+| Group \#: 18      |
+|-------------------|
+| Student Names:  	|
+|  Braden Foley     |
+|  Ethan Sengsavang |
+|  Momin Ali Khan   |
+|  Nicole Zacaruk   |
 
-# Introduction
 
-# 
+# Introduction In this assignment, we were eager to gain hands-on experience in assessing software reliability for a
+hypothetical system using failure data collected during integration testing. By working with reliability assessment
+tools such as START or C-SFRAT for reliability growth testing and the Reliability Demonstration Chart (RDC) for
+reliability assessment, we had aimed to enhance our understanding of reliability growth testing and its significance in
+software development, while also learning to measure failure rate, Mean Time To Failure (MTTF), and system reliability
+through data analysis.
 
-# Assessment Using Reliability Growth Testing 
+# Assessment Using Reliability Growth Testing The folowing are the reliability results and plots using the C-SFRAT tool.
 
-# Assessment Using Reliability Demonstration Chart 
+## Model Comparison and Failure Rate and Reliability Plots Our top two models were determined to be DW3(F,C) and
+DW3(F,E,C) which was revealed by sorting by the greatest Log-Likelihood in C-STRAT. Figure 1 shows the the
+log-likelihood values, which are -41.103 and -41.201, the highest values.
 
-# 
+//image log-likelihood ranking
+![Log-Likelihood Ranking](images/ModelComparison.png)
+
+Figure 1. Model ranking
+
+Below are the MVF graph and failure intesnsity graphs including the best fit models DW3(F,C) and DW3(F,E,C).
+
+//image MVF graph
+![MVF graph](images/MVFGraph.png)
+
+Figure 2. MVF graph with the 2 best models
+
+Fig 2 shows cumulitive failures over all intervals and visibly begins to plato at the final intervals. When we added
+predicitve data using the C-SFRAT tool the graph out in a horizontal line confirming the plato in the results. This
+indicates increased reliability.
+
+![Intensity Graph](images/IntensityGraph.png)
+
+Figure 3. Intensity graph with 2 best models
+
+Fig 3 also shows a steady decline in the intensity of failures occuring in the final intervals.
+
+## Range Analysis
+
+We plotted the Laplace trend (as seen in figure 4) and upon analysis determined the valid range to be from [6,21] given
+that u(k) is between 2 and -2 throughout that range, indicating stable reliability. The sections where u(k) is greater
+than +2 it's considered reliability decrease while values less than -2 are considered reliability increase. While our
+Laplace range does have a section of reliability increase from aproximatly [0,6], there's no instance where u(k) reaches
+a value greater than +2.
+
+![Laplace Graph](images/Laplace_Figure.png)
+
+Figure 4. Laplace Trend Graph
+
+
+# Assessment Using Reliability Demonstration Chart In evaluating the hypothetical System Under Test, we utilized the
+provided RDC Excel spreadsheet. We replaced the demonstration data with the given data points, merging time intervals in
+pairs and aggregating the errors detected at each interval. This enabled us to establish the minimum acceptable
+threshold for system errors based on the acceptable ranges.
+
+The system is considered acceptable at the point when a maximum of 81 errors are detected over 200 input events. To
+explore different MTTFs, we varied the maximum acceptable errors or the input event intervals by either increasing or
+decreasing their values.
+
+### Minimum MTTF
+
+![Min_MTTF.png](images/Min_MTTF.png)
+
+### Middle MTTF
+
+![Middle_MTTF.png](images/Middle_MTTF.png)
+
+### Higher MTTF
+
+![Higher_MTTF.png](images/Higher_MTTF.png)
+
+### Lower MTTF
+
+![Lower_MTTF](images/Lower_MTTF.png)
+
+### Evaluation and justification for the plots and pros/cons of RDC 
+
+The plots clearly show that as the acceptable number of failures increases, the program becomes more suitable for use,
+while a decrease in MTTF leads to the rejection of the program due to the number of failures occurring during runtime.
+This is logical since MTTF is a measure of the total time a system operates divided by the number of failures or
+defects.
+
+To determine the minimum MTTF, we experimented with various MTTF values, finding the plot where the final failure data
+barely entered the acceptable plot range.
+
+Using RDC to assess the reliability of an SUT offers several advantages, such as enabling both customers and developers
+to establish an acceptable failure rate for the system. RDC facilitates easy visualization of failure data in comparison
+to acceptable and rejectable failure targets. Moreover, RDC is a quick and cost-efficient method for evaluating an SUT's
+reliability once users become familiar with the tools. However, one drawback observed in this lab is that determining
+the MTTF minimum entails some educated guesswork. Nevertheless, the chart's visualization aids in approximating the MTTF
+minimum, even if it can be laborious. Additionally, RDC displays reliability in terms of trends and relativity rather
+than providing a precise quantitative value.
+
+A disadvantage of RDC is that exploring various what-if scenarios by testing different values can be time-consuming.
+While the RDC illustrates the impact of trend changes on system reliability, it does not offer definitive quantitative
+values for reliability. On the other hand, the advantages of using RDC include its ease of analysis and data input. The
+ability to examine numerous what-if scenarios is also beneficial.
+
 
 # Comparison of Results
+
+
 
 # Discussion on Similarity and Differences of the Two Techniques
 
@@ -46,8 +137,26 @@ range the newest data point falls into, informing both the client and the develo
 
 # How the team work/effort was divided and managed
 
-# 
+The task was evenly distributed between two groups. The first group focused on Part 2, obtaining results for Reliability
+Growth Testing (RGT), while the second group was responsible for acquiring and documenting the results for the
+Reliability Demonstration Chart (RDC). Our primary challenge was managing multiple deadlines concurrently, necessitating
+efficient time management to complete the assignment punctually.
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
+Throughout the assignment, we faced several difficulties such as understanding the intricacies of the reliability
+assessment tools and ensuring accurate interpretation of the results.
+
+Understanding the reliability assessment tools: Initially, comprehending the inner workings of the START, C-SFRAT, and
+RDC tools was a challenge. However, as we immersed ourselves in the documentation and experimented with various inputs,
+our understanding improved, and we became more proficient in using the tools.
+
+
+Through overcoming these challenges, we learned valuable lessons, including the importance of effective
+communication and collaboration within the team and the value of persistence when faced with complex tools and
+concepts. These lessons will undoubtedly prove useful in future academic and professional endeavors.
+
 # Comments/feedback on the lab itself
+
+We recommend that latest softwares and technologies be used and thus allowed to converse with in order to improve
+the experential learning aspect of this lab and hence, this course.
