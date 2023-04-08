@@ -19,7 +19,9 @@ reliability assessment, we had aimed to enhance our understanding of reliability
 software development, while also learning to measure failure rate, Mean Time To Failure (MTTF), and system reliability
 through data analysis.
 
-# Assessment Using Reliability Growth Testing The folowing are the reliability results and plots using the C-SFRAT tool.
+# Assessment Using Reliability Growth Testing 
+
+The folowing are the reliability results and plots using the C-SFRAT tool.
 
 ## Model Comparison and Failure Rate and Reliability Plots
 Our top two models were determined to be DW3(F,C) and
