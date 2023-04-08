@@ -105,7 +105,8 @@ values for reliability. On the other hand, the advantages of using RDC include i
 ability to examine numerous what-if scenarios is also beneficial.
 
 
-# Comparison of Results RGT and RDC are both commonly used reliability testing methods that can help developers and
+# Comparison of Results 
+RGT and RDC are both commonly used reliability testing methods that can help developers and
 customers alike decide whether or not a software system has stabilized to an acceptable failure rate. 
 
 Through analyzing our Reliability Growth Testing, our graph begins to plateau after a longer period of time of testing
