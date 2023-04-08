@@ -11,7 +11,8 @@
 |  Nicole Zacaruk   |
 
 
-# Introduction In this assignment, we were eager to gain hands-on experience in assessing software reliability for a
+# Introduction
+In this assignment, we were eager to gain hands-on experience in assessing software reliability for a
 hypothetical system using failure data collected during integration testing. By working with reliability assessment
 tools such as START or C-SFRAT for reliability growth testing and the Reliability Demonstration Chart (RDC) for
 reliability assessment, we had aimed to enhance our understanding of reliability growth testing and its significance in
@@ -20,7 +21,8 @@ through data analysis.
 
 # Assessment Using Reliability Growth Testing The folowing are the reliability results and plots using the C-SFRAT tool.
 
-## Model Comparison and Failure Rate and Reliability Plots Our top two models were determined to be DW3(F,C) and
+## Model Comparison and Failure Rate and Reliability Plots
+Our top two models were determined to be DW3(F,C) and
 DW3(F,E,C) which was revealed by sorting by the greatest Log-Likelihood in C-STRAT. Figure 1 shows the the
 log-likelihood values, which are -41.103 and -41.201, the highest values.
 
@@ -56,10 +58,12 @@ u(k) reaches a value greater than +2.
 
 Figure 4. Laplace Trend Graph
 
-# Assessment Using Reliability Demonstration Chart In evaluating the hypothetical System Under Test, we utilized the
-provided RDC Excel spreadsheet. We replaced the demonstration data with the given data points, merging time intervals
-in pairs and aggregating the errors detected at each interval. This enabled us to establish the minimum acceptable
-threshold for system errors based on the acceptable ranges.
+# Assessment Using Reliability Demonstration Chart
+
+In evaluating the hypothetical System Under Test, we utilized the provided RDC Excel spreadsheet. We replaced the
+demonstration data with the given data points, merging time intervals in pairs and aggregating the errors detected at
+each interval. This enabled us to establish the minimum acceptable threshold for system errors based on the acceptable
+ranges.
 
 The system is considered acceptable at the point when a maximum of 81 errors are detected over 200 input events. To
 explore different MTTFs, we varied the maximum acceptable errors or the input event intervals by either increasing or
@@ -105,9 +109,10 @@ values for reliability. On the other hand, the advantages of using RDC include i
 ability to examine numerous what-if scenarios is also beneficial.
 
 
-# Comparison of Results 
-RGT and RDC are both commonly used reliability testing methods that can help developers and
-customers alike decide whether or not a software system has stabilized to an acceptable failure rate. 
+# Comparison of Results
+
+RGT and RDC are both commonly used reliability testing methods that can help developers and customers alike decide
+whether or not a software system has stabilized to an acceptable failure rate. 
 
 Through analyzing our Reliability Growth Testing, our graph begins to plateau after a longer period of time of testing
 has occurred. This plateau suggests that the system is beginning to stabilize based on the given input data and the
@@ -157,7 +162,6 @@ assessment tools and ensuring accurate interpretation of the results.
 Understanding the reliability assessment tools: Initially, comprehending the inner workings of the START, C-SFRAT, and
 RDC tools was a challenge. However, as we immersed ourselves in the documentation and experimented with various inputs,
 our understanding improved, and we became more proficient in using the tools.
-
 
 Through overcoming these challenges, we learned valuable lessons, including the importance of effective communication
 and collaboration within the team and the value of persistence when faced with complex tools and concepts. These lessons
